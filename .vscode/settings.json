@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "mongodb_connector.h": "c",
+        "postgresql_connector.h": "c"
+    }
+}

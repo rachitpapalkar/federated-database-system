@@ -1,0 +1,59 @@
+To start mongoDB server: sudo systemctl start mongod
+To check mongoDB server: sudo systemctl status mongodb
+To stop mongoDB server: sudo systemctl stop mongod
+
+To see everything in mongosh:
+mongosh
+show dbs
+use ecommerce
+show collections
+db.products.find().pretty()
+
+To insert data in mongoDB:
+mongosh setup_mongodb_data.js
+
+
+
+
+To start PostgreSQL server: sudo systemctl start postgresql
+To check PostgreSQL server: sudo systemctl status postgresql
+To stop PostgreSQL server: sudo systemctl stop postgresql
+
+To login to postgres(and insert script):
+sudo -i -u postgres
+psql
+
+
+To insert data in psql:
+psql -U rachit -d ecommerce -f setup_postgresql_data.sql
+
+
+List all databases: \l
+\c ecommerce
+\dt
+SELECT * FROM products;
+
+Exit- \q
+
+
+RabbitMQ:
+http://localhost:15672/#/
+username: guest
+password: guest
+
+Restart:
+sudo systemctl restart rabbitmq-server
+
+
+Reset:
+sudo systemctl stop rabbitmq-server
+
+sudo rabbitmqctl stop_app
+sudo rabbitmqctl reset
+sudo rabbitmqctl start_app
+
+sudo systemctl start rabbitmq-server
+
+
+To RUN:
+./bin/federated_database_system
